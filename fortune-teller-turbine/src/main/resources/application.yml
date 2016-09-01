@@ -1,5 +1,5 @@
 info:
-  component: Turbine
+  component: Turbine (Stream)
 
 PREFIX:
 
@@ -9,17 +9,15 @@ endpoints:
   shutdown:
     enabled: true
 
-server:
-  port: ${PORT:8989}
+#server:
+#  port: ${PORT:8989}
 
 management:
   port: 8990
 
-#turbine:
-#  amqp:
-#    port: ${PORT:8989}
-
 turbine:
+  stream:
+    port: 8989
   appConfig: fortunes,ui
   aggregator:
     clusterConfig: FORTUNES
