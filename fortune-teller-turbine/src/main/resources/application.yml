@@ -20,9 +20,9 @@ management:
 #    port: ${PORT:8989}
 
 turbine:
-  appConfig: simple
+  appConfig: fortunes,ui
   aggregator:
-    clusterConfig: SIMPLE
+    clusterConfig: FORTUNES
 
 logging:
   level:
@@ -35,7 +35,7 @@ eureka:
     leaseRenewalIntervalInSeconds: 10
   client:
     serviceUrl:
-      defaultZone: ${vcap.services.eureka.credentials.uri:http://localhost:8761}/eureka/
+      defaultZone: ${vcap.services.service-registry.credentials.uri:http://localhost:8761}/eureka/
 
 ---
 spring:
