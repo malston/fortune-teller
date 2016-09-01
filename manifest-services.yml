@@ -3,11 +3,18 @@ memory: 384M
 instances: 1
 applications:
 - name: config-server
-  host: config-server-${random-word}
+  host: config-server-martensitic-calcitonin
   path: fortune-teller-config-server/target/fortune-teller-config-server-0.0.1-SNAPSHOT.jar
 - name: service-registry
-  host: eureka-${random-word}
+  host: eureka-obovoid-cetane
   path: fortune-teller-eureka/target/fortune-teller-eureka-0.0.1-SNAPSHOT.jar
 - name: circuit-breaker-dashboard
-  host: hystrix-dashboard-${random-word}
+  host: hystrix-dashboard-rubbery-timetable
   path: fortune-teller-hystrix-dashboard/target/fortune-teller-hystrix-dashboard-0.0.1-SNAPSHOT.jar
+- name: turbine
+  host: turbine-unrebutted-nonserviceability
+  path: fortune-teller-turbine/target/fortune-teller-turbine-0.0.1-SNAPSHOT.jar
+  services:
+  - fortunes-amqp
+  - config-server
+  - service-registry

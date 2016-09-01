@@ -1,0 +1,11 @@
+---
+memory: 1024M
+instances: 1
+applications:
+- name: turbine
+  host: turbine-unrebutted-nonserviceability
+  path: target/fortune-teller-turbine-0.0.1-SNAPSHOT.jar
+  services:
+  - fortunes-amqp
+  - config-server
+  - service-registry
